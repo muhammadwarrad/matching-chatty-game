@@ -1,0 +1,152 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-color: rgb(116, 170, 156);
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive; 
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 150px; 
+  height: 150px; 
+  background-image: url('IMG_2949.jpg'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  perspective: 1000px;
+  border-radius: 8px; 
+}
+
+.card img {
+  width: 140px;
+  height: 140px;
+  display: none; 
+}
+
+.card.flipped img {
+  display: block; 
+}
+
+.card.matched {
+  background-color: transparent;
+  box-shadow: 0 0 10px 5px rgba(0, 255, 0, 0.7); 
+}
+
+.win-message {
+  font-size: 24px;
+  font-weight: bold;
+  color: green;
+  margin-top: 20px;
+}
+
+button, #feelingChattyBtn {
+  font-family: 'Press Start 2P', cursive; 
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px; 
+}
+
+#feelingChattyBtn {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #f7f7f7;
+  color: rgb(0, 0, 0);
+  border: none;
+  margin-top: 20px;
+}
+
+#feelingChattyBtn:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.game-board {
+  grid-template-columns: repeat(2, 120px); 
+  gap: 8px;
+}
+
+.card {
+  width: 120px; 
+  height: 120px; 
+}
+
+.card img {
+  width: 110px;
+  height: 110px;
+}
+
+.win-message {
+  font-size: 20px; 
+}
+
+button {
+  padding: 10px;
+  font-size: 14px; 
+}
+
+#feelingChattyBtn {
+  font-size: 14px; 
+  padding: 10px 18px;
+}
+}
+
+@media (max-width: 480px) {
+body {
+  padding: 10px;
+}
+
+.game-board {
+  grid-template-columns: repeat(2, 100px); 
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+}
+
+.card img {
+  width: 90px;
+  height: 90px;
+}
+
+.win-message {
+  font-size: 18px; 
+}
+
+button {
+  padding: 8px;
+  font-size: 12px; 
+}
+
+#feelingChattyBtn {
+  font-size: 12px; 
+  padding: 8px 16px;
+}
+}
